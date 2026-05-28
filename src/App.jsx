@@ -7,6 +7,7 @@ import img5 from './assets/images/img5.jpg'
 import img6 from './assets/images/img6.jpg'
 import img7 from './assets/images/img7.jpg'
 import img8 from './assets/images/img8.jpg'
+import img9 from './assets/images/img9.jpg'
 
 const GOLD = "#C9A84C";
 const GOLD_LIGHT = "#E8C96B";
@@ -136,7 +137,7 @@ function HeroSection() {
 // ─── Section: Photos Gallery ───────────────────────────────────────────────────
 function PhotosSection() {
   const photos = [
-    { label: img1, w: 600, h: 800 },
+    { label: img9, w: 600, h: 800 },
     { label: img2, w: 600, h: 600 },
     { label: img3, w: 600, h: 800 },
     { label: img4, w: 600, h: 600 },
