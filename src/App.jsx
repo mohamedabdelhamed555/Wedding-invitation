@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { FaCalendarAlt, FaClock, FaMapMarkerAlt, FaMap } from "react-icons/fa";
 import img1 from './assets/images/img1.jpg'
 import img2 from './assets/images/we2.jpeg'
 import img3 from './assets/images/img2.jpg'
@@ -299,7 +300,7 @@ function PortraitSection() {
 // ─── Section: Event Details ────────────────────────────────────────────────────
 function DetailsSection() {
   const items = [
-    { icon: "📅", label: "التاريخ", value: "الاربعاء ٢٤ يونيو ٢٠٢٦" },
+    { icon: <FaCalendarAlt style={{color:"#e8e0e0"}} />, label: "التاريخ", value: "الاربعاء ٢٤ يونيو ٢٠٢٦" },
     { icon: "🕗", label: "الموعد", value: "٨:٠٠ مساءً" },
     { icon: "🏛️", label: "القاعة", value: "قاعة البرويفاج" },
     { icon: "📍", label: "العنوان", value: "طريق الأحرار، الزقازيق" },
