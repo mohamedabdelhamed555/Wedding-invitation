@@ -302,51 +302,149 @@ function PortraitSection() {
 // ─── Section: Event Details ────────────────────────────────────────────────────
 function DetailsSection() {
   const items = [
-    { icon: <FaCalendarAlt style={{color:"#e8e0e0"}} />, label: "التاريخ", value: "الاربعاء ٢٤ يونيو ٢٠٢٦" },
-    { icon: "🕗", label: "الموعد", value: "٨:٠٠ مساءً" },
-    { icon: "🏛️", label: "القاعة", value: "قاعة البرويفاج" },
-    { icon: "📍", label: "العنوان", value: "طريق الأحرار، الزقازيق" },
+    {
+      icon: <FaCalendarAlt style={{ color: "#e8e0e0" }} />,
+      label: "التاريخ",
+      value: "الاربعاء ٢٤ يونيو ٢٠٢٦",
+    },
+    {
+      icon: "🕗",
+      label: "الموعد",
+      value: "٨:٠٠ مساءً",
+    },
+    {
+      icon: "🏛️",
+      label: "القاعة",
+      value: "قاعة البرويفاج",
+    },
+    {
+      icon: "🗺️",
+      label: "العنوان",
+      value: "طريق الأحرار، الزقازيق",
+    },
   ];
+
   return (
-    <section style={{
-      background: `radial-gradient(ellipse at 50% 100%,#2a1a0a,${DARK})`,
-      padding: "80px 24px"
-    }}>
+    <section
+      style={{
+        background: `radial-gradient(ellipse at 50% 100%,#2a1a0a,${DARK})`,
+        padding: "80px 24px",
+      }}
+    >
       <SectionTitle ar="تفاصيل الحفل" en="EVENT DETAILS" />
-      <div style={{ maxWidth: 600, margin: "48px auto 0", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+
+      <div
+        style={{
+          maxWidth: 600,
+          margin: "48px auto 0",
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: 16,
+        }}
+      >
         {items.map((item, i) => (
-          <div key={i} style={{
-            background: "rgba(201,168,76,0.05)",
-            border: `1px solid ${GOLD}22`,
-            borderRadius: 4, padding: "24px 20px", textAlign: "center",
-            transition: "border-color 0.3s", cursor: "default"
-          }}
-            onMouseEnter={e => e.currentTarget.style.borderColor = `${GOLD}66`}
-            onMouseLeave={e => e.currentTarget.style.borderColor = `${GOLD}22`}
+          <div
+            key={i}
+            style={{
+              background: "rgba(201,168,76,0.05)",
+              border: `1px solid ${GOLD}22`,
+              borderRadius: 4,
+              padding: "24px 20px",
+              textAlign: "center",
+              transition: "border-color 0.3s",
+              cursor: "default",
+            }}
+            onMouseEnter={(e) =>
+              (e.currentTarget.style.borderColor = `${GOLD}66`)
+            }
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.borderColor = `${GOLD}22`)
+            }
           >
-            <div style={{ fontSize: 28, marginBottom: 12 }}>{item.icon}</div>
-            <div style={{ fontSize: 11, color: `${GOLD}77`, letterSpacing: 2, marginBottom: 6 }}>{item.label}</div>
-            <div style={{ fontSize: 16, color: "#ffffffcc", fontWeight: 500 }}>{item.value}</div>
+            <div style={{ fontSize: 32, marginBottom: 12 }}>
+              {item.icon}
+            </div>
+
+            <div
+              style={{
+                fontSize: 15,
+                color: `${GOLD}77`,
+                letterSpacing: 2,
+                marginBottom: 6,
+              }}
+            >
+              {item.label}
+            </div>
+
+            <div
+              style={{
+                fontSize: 16,
+                color: "#ffffffcc",
+                fontWeight: 500,
+              }}
+            >
+              {item.value}
+            </div>
           </div>
         ))}
       </div>
 
       <div style={{ maxWidth: 600, margin: "24px auto 0" }}>
-        <div style={{
-          background: "rgba(201,168,76,0.05)",
-          border: `1px solid ${GOLD}22`,
-          borderRadius: 4, padding: "24px", textAlign: "center"
-        }}>
-          <div style={{ fontSize: 28, marginBottom: 8 }}>🗺️</div>
-          <div style={{ fontSize: 11, color: `${GOLD}77`, letterSpacing: 2, marginBottom: 8 }}>الموقع</div>
-          <div style={{
-            background: "#111", borderRadius: 2, height: 120,
-            display: "flex", alignItems: "center", justifyContent: "center",
-            color: "#ffffff33", fontSize: 13
-          }}>
-            طريق الأحرار — الزقازيق، محافظة الشرقية
+        <a
+          href="https://maps.app.goo.gl/6RrqDzbaB6Ah7vwZ6"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            textDecoration: "none",
+            color: "inherit",
+          }}
+        >
+          <div
+            style={{
+              background: "rgba(201,168,76,0.05)",
+              border: `1px solid ${GOLD}22`,
+              borderRadius: 4,
+              padding: "24px",
+              textAlign: "center",
+              cursor: "pointer",
+              transition: "border-color 0.3s",
+            }}
+            onMouseEnter={(e) =>
+              (e.currentTarget.style.borderColor = `${GOLD}66`)
+            }
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.borderColor = `${GOLD}22`)
+            }
+          >
+            <div style={{ fontSize: 30, marginBottom: 8 }}>📍</div>
+
+            <div
+              style={{
+                fontSize: 15,
+                color: `${GOLD}77`,
+                letterSpacing: 2,
+                marginBottom: 8,
+              }}
+            >
+              الموقع
+            </div>
+
+            <div
+              style={{
+                background: "#111",
+                borderRadius: 2,
+                height: 120,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "#e7d5d5",
+                fontSize: 17,
+              }}
+            >
+              اضغط هنا لفتح موقع الحفل على Google Maps
+            </div>
           </div>
-        </div>
+        </a>
       </div>
     </section>
   );
