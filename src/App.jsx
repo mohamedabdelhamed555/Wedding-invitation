@@ -3,14 +3,14 @@ import { FaCalendarAlt, FaClock, FaMapMarkerAlt, FaMap } from "react-icons/fa";
 import img1 from './assets/images/img1.jpg'
 
 
-import img2 from './assets/images/img2.jpg'
-import img3 from './assets/images/img3.jpg'
-import img4 from './assets/images/img5.jpg'
+import img2 from './assets/images/img5.jpg'
+import img3 from './assets/images/img2.jpg'
+import img4 from './assets/images/img4.jpg'
 import img5 from './assets/images/we1.jpeg'
 import img6 from './assets/images/we3.jpeg'
 import img7 from './assets/images/we2.jpeg'
 import img8 from './assets/images/we4.jpeg'
-import img9 from './assets/images/img4.jpg'
+import img9 from './assets/images/img3.jpg'
 
 const GOLD = "#C9A84C";
 const GOLD_LIGHT = "#E8C96B";
